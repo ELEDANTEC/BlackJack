@@ -1,0 +1,49 @@
+
+<!doctype html>
+<!--Partie 1-->
+<html>
+	<head>
+		<meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" language="JavaScript" src="script.js">
+           
+        </script>
+		<title>Blackjack</title>
+	</head>
+	<body>
+        <div>
+            <h1>Blackjack</h1>
+        </div>
+        <div id="cartes">
+            <p>
+                <h2>Les cartes de la banque</h2>
+            </p>
+            <p id="cartesbanque">
+                <script src="valeurbanque.js"></script>
+            </p>
+            <p>
+                <h2>Vos cartes</h2>
+            </p>
+            <p id="cartesjoueur">
+                <script src="valeurjoueur.js"></script>
+            </p>
+        </div>
+        <div id="valeurs">
+            <p id="valeurcartesbanque">
+                <script>
+                    document.write("La banque a "+valeurbanque+".");
+                </script>
+            </p>
+            <p id="valeurcartesjoueur">
+                <script>
+                    document.write("Vous avez "+valeurjoueur+". Carte ou reste ?");
+                </script>
+            </p>
+        </div>
+        <div> <!--Espace boutons-->
+            <form method="post" name="boutons">
+                <input type="button" value="Carte" onclick="nouvelleCarte()"> <input type="button" value="Reste" onclick="tirageBanque()"> <input type="button" value="Rejouer" onclick="history.go(0)">
+            </form>
+        </div>
+	</body>
+</html>
